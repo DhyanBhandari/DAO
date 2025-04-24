@@ -1,0 +1,42 @@
+# Hardhat files
+cache/
+artifacts/
+typechain/
+typechain-types/
+
+# Development files
+node_modules/
+coverage/
+coverage.json
+.coverage_artifacts/
+.coverage_cache/
+.coverage_contracts/
+
+# Environment variables
+.env
+.env.local
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Deployment files
+deployments/**/!*.gitkeep
+info/
+
+# Gas report
+gas-report.txt
+
+# Misc
+.DS_Store
+.directory
+.Trash-*

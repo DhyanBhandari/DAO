@@ -1,0 +1,59 @@
+{
+    "name": "erthaloka-token",
+    "version": "1.0.0",
+    "description": "Erthaloka Token (ERTH) Smart Contract",
+    "main": "index.js",
+    "scripts": {
+      "compile": "hardhat compile",
+      "test": "hardhat test",
+      "test:gas": "REPORT_GAS=true hardhat test",
+      "test:coverage": "hardhat coverage",
+      "deploy:mainnet": "hardhat run scripts/deploy/01_deploy_factory.js --network mainnet && hardhat run scripts/deploy/02_deploy_token.js --network mainnet",
+      "deploy:testnet": "hardhat run scripts/deploy/01_deploy_factory.js --network sepolia && hardhat run scripts/deploy/02_deploy_token.js --network sepolia",
+      "verify:mainnet": "hardhat run scripts/verify/verify_contracts.js --network mainnet",
+      "verify:testnet": "hardhat run scripts/verify/verify_contracts.js --network sepolia",
+      "accounts": "hardhat accounts",
+      "token:info": "hardhat token-info",
+      "clean": "hardhat clean",
+      "lint": "eslint '**/*.js' && solhint 'contracts/**/*.sol'",
+      "lint:fix": "eslint '**/*.js' --fix && solhint 'contracts/**/*.sol' --fix"
+    },
+    "keywords": [
+      "ethereum",
+      "smart-contracts",
+      "token",
+      "erc20",
+      "staking",
+      "vesting",
+      "governance"
+    ],
+    "author": "Erthaloka Team",
+    "license": "MIT",
+    "devDependencies": {
+      "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
+      "@nomicfoundation/hardhat-ethers": "^3.0.0",
+      "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+      "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+      "@nomicfoundation/hardhat-verify": "^1.0.0",
+      "@openzeppelin/hardhat-upgrades": "^2.0.0",
+      "chai": "^4.3.7",
+      "dotenv": "^16.3.1",
+      "eslint": "^8.42.0",
+      "eslint-config-standard": "^17.1.0",
+      "eslint-plugin-import": "^2.27.5",
+      "eslint-plugin-node": "^11.1.0",
+      "eslint-plugin-prettier": "^4.2.1",
+      "eslint-plugin-promise": "^6.1.1",
+      "ethers": "^6.6.4",
+      "hardhat": "^2.17.0",
+      "hardhat-gas-reporter": "^1.0.9",
+      "prettier": "^2.8.8",
+      "prettier-plugin-solidity": "^1.1.3",
+      "solhint": "^3.4.1",
+      "solhint-plugin-prettier": "^0.0.5",
+      "solidity-coverage": "^0.8.4"
+    },
+    "dependencies": {
+      "@openzeppelin/contracts": "^4.9.2"
+    }
+  }
