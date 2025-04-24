@@ -2,6 +2,8 @@
 pragma solidity ^0.8.20;
 
 import "../interfaces/IErthaToken.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+
 
 /**
  * @title GovernanceOperations
